@@ -1,0 +1,805 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import "./base/variables";
+@import "./base/fonts";
+@import "./base/mixins";
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.main {
+  width: 1440px;
+  height: 700px;
+  margin: 0 auto;
+  color: #fff;
+  background: {
+    image: url(@img/Background.png);
+    repeat: no-repeat;
+    size: contain;
+    position: left;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 107px;
+  &__logo {
+    line-height: 116px;
+    @include font("Montserrat-bold", 20px, 700);
+  }
+
+  &__form {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 120px;
+
+    button {
+      @include font("Montserrat-regular", 14px, 400);
+      width: 90px;
+      height: 36px;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 18px;
+    }
+  }
+  &__log-in {
+    button {
+      border: none;
+    }
+  }
+}
+.main {
+  h1,
+  h2 {
+    text-align: center;
+  }
+  h1 {
+    width: 60%;
+    margin: 0 auto;
+    @include font("Montserrat-bold", 52px, 700);
+  }
+  h2 {
+    @include font("Roboto-light", 24px, 300);
+    line-height: 80px;
+    margin-bottom: 8px;
+  }
+  .find-partner {
+    width: 225px;
+    height: 40px;
+    background-color: $buttons-color;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    @include font("Montserrat-bold", 14px, 700);
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+  }
+  margin-bottom: 89px;
+}
+
+.works {
+  width: 1440px;
+  margin: 0 auto;
+  h2 {
+    @include font("Montserrat-bold", 26px, 700);
+    text-align: center;
+    margin-bottom: 36px;
+    color: #444444;
+  }
+  .d-flex {
+    justify-content: space-between;
+  }
+  .step1 {
+    background: url(../img/Step\ 1\ image.png);
+  }
+  .step2 {
+    background: url(../img/Step\ 2\ image.png);
+  }
+  .step3 {
+    background: url(../img/Step\ 3\ image.png);
+  }
+  button {
+    width: 70px;
+    height: 20px;
+    background-color: $buttons-color;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    @include font("Montserrat-regular", 10px, 400);
+  }
+  &__step {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 26px;
+    padding-bottom: 22px;
+    h3 {
+      @include font("Montserrat-Bold", 24px, 700);
+      line-height: 26px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    p {
+      @include font("Roboto-light", 14px, 300);
+      line-height: 14px;
+      color: #e3e3e3;
+    }
+  }
+  margin-bottom: 89px;
+}
+
+.partners {
+  width: 1440px;
+  margin: 0 auto;
+  h2 {
+    @include font("Montserrat-bold", 26px, 700);
+    text-align: center;
+    margin-bottom: 36px;
+    color: #444444;
+  }
+  &__d-flex {
+    display: flex;
+    justify-content: space-between;
+    .partners-card {
+      width: 24%;
+      height: 220px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 17px;
+    }
+    h4 {
+      @include font("Montserrat-bold", 14px, 700);
+      line-height: 17px;
+      text-align: center;
+      color: #444444;
+      margin-bottom: 21px;
+    }
+    p {
+      @include font("Roboto-light", 14px, 300);
+      line-height: 14px;
+      text-align: center;
+      color: #666666;
+      width: 90%;
+    }
+    margin-bottom: 40px;
+  }
+  button {
+    width: 180px;
+    height: 40px;
+    border: 2px solid $buttons-color;
+    border-radius: 33px;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    @include font("Montserrat-bold", 14px, 700);
+    line-height: 38px;
+    color: $buttons-color;
+  }
+  margin-bottom: 89px;
+}
+
+.ideas {
+  width: 1440px;
+  margin: 0 auto;
+  &__title {
+    @include font("Montserrat-bold", 26px, 700);
+    line-height: 32px;
+    text-align: center;
+    color: #444444;
+    margin-bottom: 34px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 310px 310px 310px;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+  &__grid__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .grid__item__title {
+      margin: auto;
+      color: #fff;
+      text-align: center;
+      z-index: 1;
+      h4 {
+        @include font("Montserrat-bold", 22px, 700);
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+  &__grid__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 310px;
+    background-color: #000;
+    opacity: 20%;
+  }
+
+  .t-l {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: url(../img/Sport_and_activis.png);
+  }
+  .t-c {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: url(../img/Wellness_and_health.png);
+  }
+  .t-r {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: url(../img/Extreme_sports.png);
+  }
+  .c-l {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: url(../img/games.png);
+  }
+  .c-r {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: url(../img/culture_and_education.png);
+  }
+  .b-l {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: url(../img/Enjomet_and_relaxation.png);
+  }
+  .b-r {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: url(../img/Trevelling.png);
+  }
+  margin-bottom: 90px;
+}
+
+.create {
+  width: 1440px;
+  margin: 0 auto;
+  &__title {
+    @include font("Montserrat-bold", 26px, 700);
+    text-align: center;
+    color: #444444;
+    margin-bottom: 50px;
+  }
+  &__subtitle {
+    @include font("Roboto-light", 18px, 300);
+    text-align: center;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  &__form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  &__input {
+    display: block;
+    width: 299px;
+    height: 40px;
+    margin-right: 10px;
+    border: 1px solid #d4d4d4;
+    padding-left: 12px;
+    padding-top: 5px;
+  }
+  &__input::placeholder {
+    @include font("Roboto-light", 14px, 300);
+    line-height: 8px;
+    color: #999999;
+  }
+
+  &__button {
+    width: 172px;
+    height: 40px;
+    background-color: $buttons-color;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    @include font("Montserrat-bold", 14px, 700);
+    color: #fff;
+  }
+  margin-bottom: 101px;
+}
+
+.footer {
+  width: 1440px;
+  margin: 0 auto;
+  border-top: 2px solid $buttons-color;
+  .container {
+    margin: 0 auto;
+    padding-top: 37px;
+    height: 258px;
+  }
+  &__logo {
+    width: 248px;
+    h5 {
+      @include font("Montserrat-regular", 16px, 400);
+      letter-spacing: 1px;
+      color: $buttons-color;
+    }
+  }
+  h4 {
+    @include font("Montserrat-bold", 14px, 700);
+    line-height: 17px;
+    display: flex;
+    color: #444444;
+    margin-bottom: 15px;
+  }
+  &__company {
+    width: 248px;
+    ul {
+      list-style-type: none;
+      li {
+        @include font("Roboto-light", 14px, 300);
+        line-height: 25px;
+        color: #999999;
+      }
+    }
+  }
+  &__partners {
+    width: 240px;
+  }
+  &__authors {
+    width: 240px;
+    text-align: end;
+    span {
+      display: block;
+      @include font("Montserrat-bold", 10px, 400);
+      line-height: 12px;
+      letter-spacing: 1px;
+      color: #cccccc;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .container {
+    width: 748px;
+  }
+  .main {
+    width: 768px;
+    height: 700px;
+    background: {
+      size: cover;
+      position: center;
+    }
+  }
+  .header {
+    &__logo {
+      margin-left: 38px;
+    }
+    &__form {
+      margin-right: 39px;
+    }
+  }
+  .main {
+    h1 {
+      width: 80%;
+    }
+    margin-bottom: 93px;
+  }
+
+  .works {
+    width: 748px;
+    h2 {
+      @include font("Montserrat-bold", 22px, 700);
+    }
+    button {
+      margin-bottom: 45px;
+      @include font("Montserrat-regular", 10px, 400);
+    }
+    .works__step {
+      width: 236px;
+      padding: 20px;
+      padding-bottom: 16px;
+      h3 {
+        line-height: 14px;
+        margin-bottom: 29px;
+      }
+    }
+    .works__step:nth-child(2) {
+      button {
+        margin-bottom: 16px;
+      }
+      h3 {
+        margin-bottom: 24px;
+      }
+    }
+    margin-bottom: 93px;
+  }
+  .partners {
+    width: 748px;
+    h2 {
+      @include font("Montserrat-bold", 22px, 700);
+    }
+    &__d-flex {
+      width: 69%;
+      height: 478px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      .partners-card {
+        width: 50%;
+      }
+      margin-bottom: 24px;
+    }
+    margin-bottom: 92px;
+  }
+  .ideas {
+    width: 748px;
+    &__title {
+      @include font("Montserrat-bold", 22px, 700);
+    }
+    &__grid {
+      grid-template-columns: 236px 236px 236px;
+    }
+    &__grid__item {
+      .grid__item__title {
+        width: 80%;
+      }
+    }
+    .t-l {
+      background-position-x: -39px;
+      .grid__item__title {
+        position: relative;
+        top: -14px;
+      }
+    }
+    .t-c {
+      background-position-x: -40px;
+    }
+    .t-r {
+      background-position-x: -20px;
+    }
+    .c-l {
+      background-position-x: -30px;
+    }
+    .c-r {
+      background-position-x: -70px;
+    }
+    margin-bottom: 93px;
+  }
+  .create {
+    width: 748px;
+    &__title {
+      @include font("Montserrat-bold", 22px, 700);
+    }
+  }
+  .footer {
+    width: 100%;
+    .container {
+      margin: 0 auto;
+      padding: 37px 29px 0px;
+      height: 258px;
+      .footer__logo {
+        width: 370px;
+        h5 {
+          font-family: "Montserrat-regular";
+          font-weight: 400;
+          font-size: 16px;
+          @include font("Montserrat-regular", 16px, 400);
+          letter-spacing: 1px;
+          color: $buttons-color;
+        }
+      }
+      .footer__company {
+        width: 276px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 320px;
+  }
+  .main {
+    width: 320px;
+    height: 540px;
+    background: {
+      image: url("../img/-768/Background\ small.png");
+      size: cover;
+      position: center;
+    }
+  }
+  .header {
+    padding-top: 20px;
+    flex-direction: column-reverse;
+    margin-bottom: 24px;
+    &__logo {
+      margin-left: 86px;
+      line-height: 30px;
+    }
+
+    &__form {
+      width: 93%;
+      justify-content: center;
+      margin-bottom: 94px;
+      margin-left: -12px;
+    }
+    &__log-in {
+      width: 86px;
+    }
+  }
+  .main {
+    h1 {
+      width: 98%;
+      @include font("Montserrat-bold", 30px, 700);
+      margin-bottom: 6px;
+    }
+    h2 {
+      @include font("Roboto-light", 18px, 300);
+      width: 80%;
+      line-height: 26px;
+      margin: 0 auto;
+      margin-bottom: 12px;
+    }
+    .find-partner {
+      width: 277px;
+    }
+    margin-bottom: 34px; // delete if not change
+  }
+  .works {
+    width: 320px;
+    .container {
+      padding: 0px 10px;
+      margin: 0 auto;
+    }
+    h2 {
+      @include font("Montserrat-bold", 22px, 700);
+      margin-bottom: 13px;
+    }
+    .d-flex {
+      flex-wrap: wrap;
+    }
+    .step1 {
+      background: url("../img/-768/Step\ 1\ image\ sm.png");
+    }
+    .step2 {
+      background: url("../img/-768/Step\ 2\ image\ sm.png");
+    }
+    .step3 {
+      background: url("../img/-768/Step\ 3\ image\ sm.png");
+    }
+    button {
+      margin-bottom: 45px;
+    }
+    &__step {
+      height: 240px;
+      padding: 20px 28px 16px 20px;
+      margin-bottom: 10px;
+      h3 {
+        line-height: 16px;
+      }
+    }
+    &__step:nth-child(2) {
+      button {
+        margin-bottom: 29px;
+      }
+    }
+    margin-bottom: 27px;
+  }
+  .partners {
+    width: 320px;
+    h2 {
+      @include font("Montserrat-bold", 22px, 700);
+      margin-bottom: 14px;
+    }
+    &__d-flex {
+      flex-wrap: wrap;
+      .partners-card {
+        width: 100%;
+        margin-bottom: 2px;
+      }
+      //  поміняв місцями два середні блоки
+      .partners-card:nth-child(2) {
+        position: relative;
+        top: 241px;
+        margin-bottom: 17px;
+      }
+      .partners-card:nth-child(3) {
+        position: relative;
+        bottom: 237px;
+        h4 {
+          margin-bottom: 28px;
+        }
+      }
+      h4 {
+        margin-bottom: 23px;
+      }
+      p {
+        width: 75%;
+        margin: 0 auto;
+      }
+      margin-bottom: 20px;
+    }
+    button {
+      width: 280px;
+    }
+    margin-bottom: 35px;
+  }
+  .ideas {
+    width: 320px;
+    padding: 0 10px;
+    .container {
+      margin: 0 auto;
+    }
+    &__title {
+      @include font("Montserrat-bold", 22px, 700);
+      line-height: 28px;
+      margin-bottom: 33px;
+      width: 87%;
+      margin-left: 11px;
+    }
+    &__grid {
+      grid-template-columns: 300px;
+      grid-template-rows: 120px 120px 120px 120px 120px 120px 120px;
+      row-gap: 10px;
+      column-gap: 0px;
+    }
+    &__grid__item {
+      height: 120px;
+    }
+    &__grid__item:nth-child(1) .grid__item__title {
+      margin: auto;
+      margin-top: 20px;
+      width: 60%;
+    }
+    &__grid__item:nth-child(2) .grid__item__title {
+      margin: auto;
+      width: 60%;
+    }
+    &__grid__item:before {
+      height: 120px;
+    }
+
+    .t-l {
+      background: url("../img/-768/Sport\ sm.png");
+    }
+    .t-c {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      background: url("../img/-768/Object.png");
+    }
+    .t-r {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      background: url("../img/-768/Object\ \(1\).png");
+    }
+    .c-l {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      background: url("../img/-768/Games\ sm.png");
+    }
+    .c-r {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 5;
+      grid-row-end: 6;
+      background: url("../img/-768/culture_and_education_sm.png");
+    }
+    .b-l {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 6;
+      grid-row-end: 7;
+      background: url("../img/-768/Enjomet_and_relaxation_sm.png");
+    }
+    .b-r {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 7;
+      grid-row-end: 8;
+      background: url("../img/-768/treveling_sm.png");
+    }
+    margin-bottom: 33px;
+  }
+  .create {
+    width: 320px;
+    &__title {
+      @include font("Montserrat-bold", 22px, 700);
+      width: 70%;
+      margin: auto;
+      margin-bottom: 16px;
+    }
+    &__subtitle {
+      margin-bottom: 11px;
+    }
+    &__form {
+      align-items: center;
+      flex-direction: column;
+    }
+    &__input {
+      width: 280px;
+      margin-right: 0px;
+      margin-bottom: 9px;
+    }
+
+    &__button {
+      width: 280px;
+    }
+    margin-bottom: 41px;
+  }
+  .footer {
+    width: 320px;
+    .container {
+      padding-top: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__logo {
+      text-align: center;
+      margin-bottom: 13px;
+    }
+    h4 {
+      display: block;
+      margin-bottom: 1px;
+      text-align: center;
+    }
+    &__company {
+      width: 60%;
+      margin-bottom: -2px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: baseline;
+        margin-bottom: 10px;
+        li {
+          display: inline;
+          margin: auto;
+        }
+      }
+    }
+    &__authors {
+      margin-top: 13px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title final project
+  link(rel='stylesheet', href='css/style.min.css')
+.main
+  .container
+    header.header
+      .header__logo DREAMSHARE
+      .header__form
+        .header__log-in
+          button Log in
+        .header__sign-up
+          button Sign up
+    h1 SHARE YOUR HOLIDAY DREAM
+    h2 And find the perfect partner to fullfill it
+    button.find-partner Find your holiday partner
+.works
+  .container
+    h2 How Dreamshare works?
+    .d-flex
+      .works__step.step1
+        button STEP 1
+        h3 Sed leo enim, condimentum
+        p
+          | Quisque libero libero, dictum non turpis in, luctus semper lorem.
+          | Donec rhoncus a leo sit amet facilisis.
+      .works__step.step2
+        button STEP 2
+        h3 Morbi velit risus
+        p
+          | Nulla venenatis tempor dui in molestie. Nulla quis dictum purus,
+          | sit amet porttitor est.
+      .works__step.step3
+        button STEP 3
+        h3 Sed leo enim, condimentum
+        p
+          | Quisque libero libero, dictum non turpis in, luctus semper lorem.
+          | Donec rhoncus a leo sit amet facilisis.
+.partners
+  .container
+    h2 Meet a partner for your best holiday
+    .partners__d-flex
+      .partners-card
+        img(src='./img/Avatar1.png', alt='Avatar1')
+        h4 Bradley Hunter
+        p Based in Chicago. I love playing tennis and loud music.
+      .partners-card
+        img(src='./img/Avatar2.png', alt='Avatar2')
+        h4 Marie Bennett
+        p
+          | Currently living in Colorado. Lover of art, languages and
+          | travelling.
+      .partners-card
+        img(src='./img/Avatar3.png', alt='Avatar3')
+        h4 Diana Wells
+        p
+          | Living in Athens, Greece. I love black and white classics,
+          | chillout music and green tea.
+      .partners-card
+        img(src='./img/Avatar4.png', alt='Avatar4')
+        h4 Christopher Pierce
+        p
+          | Star Wars fanatic. I have a persistent enthusiasm to create new
+          | things.
+    button See other partners
+.ideas
+  .container
+    h3.ideas__title Discover holiday activity ideas
+    .ideas__grid
+      .ideas__grid__item.t-l
+        .grid__item__title
+          h4 Sports and Activis
+      .ideas__grid__item.t-c
+        .grid__item__title
+          h4 Wellness and Health
+      .ideas__grid__item.t-r
+        .grid__item__title
+          h4
+            | Extreme Sports 
+            br
+            |                 and Expeditions
+      .ideas__grid__item.c-l
+        .grid__item__title
+          h4 Games
+      .ideas__grid__item.c-r
+        .grid__item__title
+          h4 Culture and Education
+      .ideas__grid__item.b-l
+        .grid__item__title
+          h4 Enjomet and Relaxation
+      .ideas__grid__item.b-r
+        .grid__item__title
+          h4 Trevelling
+.create
+  h3.create__title Crate your holiday activity
+  h4.create__subtitle Hi! What are your holiday interests?
+  .create__form
+    input.create__input(type='text', placeholder='Enter your insterests')
+    button.create__button Search partners
+footer.footer
+  .container.d-flex
+    .footer__logo
+      h5 DREMSHARE
+    .footer__company
+      h4 Company
+      ul
+        li About
+        li Contact
+        li Press
+        li Blog
+        li Terms and Privacy
+        li Help
+    .footer__partners
+      h4 Partners
+    .footer__authors
+      span DESIGNED BY
+      .footer__authors__logo
+        img(src='./img/Areto_development.png', alt='')
